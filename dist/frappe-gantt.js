@@ -10,18 +10,18 @@ var Gantt = (function () {
   const MILLISECOND = "millisecond";
 
   const SHORTENED = {
-    January: "Jan",
-    February: "Feb",
-    March: "Mar",
-    April: "Apr",
-    May: "May",
-    June: "Jun",
-    July: "Jul",
-    August: "Aug",
-    September: "Sep",
-    October: "Oct",
-    November: "Nov",
-    December: "Dec"
+    January: "１月",
+    February: "２月",
+    March: "３月",
+    April: "４月",
+    May: "５月",
+    June: "６月",
+    July: "７月",
+    August: "８月",
+    September: "９月",
+    October: "１０月",
+    November: "１１月",
+    December: "１２月"
   };
 
   var date_utils = {
