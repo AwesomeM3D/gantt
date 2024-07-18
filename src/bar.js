@@ -290,7 +290,7 @@ export default class Bar {
     $.on(this.group, "mouseenter", (e) => timeout = setTimeout(() => {
       this.show_popup(e.offsetX)
       document.querySelector(
-          `#${task_id.replace(/([0-9])/g, '\\$1')}-highlight`,
+          `#${task_id.replace(/([0-9])/g, '\\$1 ')}-highlight`,
       ).style.display = 'block';
     }, 200))
 
@@ -298,7 +298,7 @@ export default class Bar {
       clearTimeout(timeout)
       this.gantt.popup?.hide?.()
       document.querySelector(
-          `#${task_id.replace(/([0-9])/g, '\\$1')}-highlight`,
+          `#${task_id.replace(/([0-9])/g, '\\$1 ')}-highlight`,
       ).style.display = 'none';
     })
 
