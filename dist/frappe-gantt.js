@@ -17,7 +17,7 @@ var Gantt = (function () {
     May: "5月",
     June: "6月",
     July: "7月",
-    August: "8月",
+    August: "はち月",
     September: "9月",
     October: "10月",
     November: "11月",
