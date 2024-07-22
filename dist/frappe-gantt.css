@@ -98,9 +98,6 @@
   font-weight: 500;
   font-size: 16px;
 }
-.gantt-container .current-upper {
-  position: fixed;
-}
 .gantt-container .side-header {
   position: fixed;
   padding: 0 10px;
