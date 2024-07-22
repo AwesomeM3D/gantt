@@ -60,8 +60,8 @@ $dark-blue: #2c94ec !default;
   }
 
   .current-upper {
-    //  awesome スクロールなので月がずれずバグ対応
-    // position: fixed;
+    //  awesome スクロール等で月がずれるバグ対応(current-upperの処理をしない)
+    //position: fixed;
   }
 
   .side-header {

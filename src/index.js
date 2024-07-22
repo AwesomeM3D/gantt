@@ -932,18 +932,17 @@ export default class Gantt {
       const upperTexts = Array.from(document.querySelectorAll('.upper-text'));
       const $el = upperTexts.find(el => el.textContent === currentUpper)
       if ($el && !$el.classList.contains('current-upper')) {
-        //  awesome
-        // const $current = document.querySelector('.current-upper')
-        // if ($current) {
-        //   $current.classList.remove('current-upper')
-        //   $current.style.left = this.upper_texts_x[$current.textContent] + 'px';
-        //   $current.style.top = this.options.header_height - 50 + 'px';
-        // }
-
-        // $el.classList.add('current-upper')
-        // let dimensions = this.$svg.getBoundingClientRect()
-        // $el.style.left = dimensions.x + this.$container.scrollLeft + 10 + 'px';
-        // $el.style.top = dimensions.y + this.options.header_height - 50 + 'px';
+          //  awesome スクロール等で月がずれるバグ対応(current-upperの処理をしない)
+          // const $current = document.querySelector('.current-upper')
+          // if ($current) {
+          //   $current.classList.remove('current-upper')
+          //   $current.style.left = this.upper_texts_x[$current.textContent] + 'px';
+          //   $current.style.top = this.options.header_height - 50 + 'px';
+          // }
+          // $el.classList.add('current-upper')
+          // let dimensions = this.$svg.getBoundingClientRect()
+          // $el.style.left = dimensions.x + this.$container.scrollLeft + 10 + 'px';
+          // $el.style.top = dimensions.y + this.options.header_height - 50 + 'px';
       }
 
       Array.prototype.forEach.call(elements, function (el, i) {
