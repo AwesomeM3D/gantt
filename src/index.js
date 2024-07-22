@@ -391,8 +391,10 @@ export default class Gantt {
     });
 
     $.attr(this.$svg, {
-      height: grid_height + this.options.padding + 100,
-      width: "100%",
+        //  awesome edited スクロールバーまでのheightが大きいので減らす
+        // height: grid_height + this.options.padding + 100,
+        height: grid_height + this.options.padding,
+        width: '100%',
     });
   }
 
@@ -932,7 +934,7 @@ export default class Gantt {
       const upperTexts = Array.from(document.querySelectorAll('.upper-text'));
       const $el = upperTexts.find(el => el.textContent === currentUpper)
       if ($el && !$el.classList.contains('current-upper')) {
-          //  awesome スクロール等で月がずれるバグ対応(current-upperの処理をしない)
+          //  awesome edited スクロール等で月がずれる対応(current-upperの処理をしない)
           // const $current = document.querySelector('.current-upper')
           // if ($current) {
           //   $current.classList.remove('current-upper')
