@@ -1,4 +1,13 @@
 #
 # カストマイズ
 #
+
+# 環境の作り方
+
+1. .devcontainerの作成
+2. git clone
+3. yarn install
+
+
+# build
 yarn build
