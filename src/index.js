@@ -217,6 +217,7 @@ export default class Gantt {
 
   refresh(tasks, scroll = true) {
     this.setup_tasks(tasks);
+    //  awesome edited　refreshしたときにscrollするかを指定できるように対応。
     this.change_view_mode(undefined, scroll);
   }
 
@@ -627,6 +628,11 @@ export default class Gantt {
       const height = (this.options.bar_height + this.options.padding) * this.tasks.length;
       this.$current_highlight = this.create_el({ top, left, height, classes: 'current-highlight', append_to: this.$container })
       let $today = document.getElementById(date_utils.format(date).replaceAll(' ', '_'))
+
+      //  awesome edited 当日が表示されていないとエラーになるため、その対応。
+      if (!$today) {
+        return;
+      }
 
       $today.classList.add('current-date-highlight')
       $today.style.top = +$today.style.top.slice(0, -2) - 4 + 'px'
