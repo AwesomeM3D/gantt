@@ -1566,7 +1566,8 @@ var Gantt = (function () {
       $.attr(this.$svg, {
           //  awesome edited スクロールバーまでのheightが大きいので減らす
           //height: grid_height + this.options.padding + 100,
-          height: grid_height + this.options.padding,
+          height: grid_height + this.options.padding + 60,
+          //height: grid_height + this.options.padding,
           width: '100%',
       });
     }
